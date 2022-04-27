@@ -12,7 +12,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${DB_PASS}
 
   api:
-    image: node:latest
+    build:
+      context: .
     container_name: api
     restart: always
     env_file:
@@ -24,7 +25,6 @@ services:
     volumes:
       - .:/usr/src/app
     working_dir: /usr/src/app
-    command: npm run start
     logging:
       driver: "json-file"
       options:

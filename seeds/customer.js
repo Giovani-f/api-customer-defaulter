@@ -9,8 +9,14 @@ export const customerSeed = async () => {
     }),
     CustomerModel.create({
       name: 'Junior',
-      email: 'junior@teste.com',
+      email: 'junin@teste.com',
       defaulter: false
     })
   ]
+
+  await CustomerModel.deleteMany({})
+
+  for (let customer of customers) {
+    await customer
+  }
 }

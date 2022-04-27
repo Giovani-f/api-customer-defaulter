@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon -r dotenv/config src/server.js",
-    "seed-db": "node seeds/index.js"
+    "seed-db": "node -r dotenv/config seeds/index.js"
   },
   "keywords": [],
   "author": "",
